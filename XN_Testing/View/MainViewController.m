@@ -208,17 +208,6 @@
         [self refreshTableViewForRow:i columns:@[@2]];
     }
     
-    if (self.loopTextField.intValue > 0) {
-        for (int i = 0; i < self.loopTextField.intValue; i++) {
-            for (CreateTest *test in self.testControllers) {
-                test.testItems = load.testItems;
-                [test startTestWithCompletion:^(BOOL isPassed) {
-                    NSInteger row = [self.testControllers indexOfObject:test];
-                    [self refreshTableViewForRow:row columns:@[@3, @6, @7]];
-                }];
-            }
-        }
-    } else {
 //        刷新测试状态、结果、以及持续测试时间
         for (CreateTest *test in self.testControllers) {
             test.testItems = load.testItems;
@@ -227,7 +216,6 @@
                 [self refreshTableViewForRow:row columns:@[@3, @6, @7]];
             }];
         }
-    }
     _currentIndex = 0;
 }
 
