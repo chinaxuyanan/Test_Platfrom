@@ -20,7 +20,6 @@
 - (void) startTestWithCompletion:(void (^)(BOOL isPassed)) completion {
     if (self.isRunning) return;
     self.isRunning = YES;
-//    self.currentTestIndex = 0;
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [self->_slotModel startTiming];
@@ -63,7 +62,6 @@
                 @"sourceTest": self,
                 @"gress": self->_slotModel.gress
             }];
-            [NSThread sleepForTimeInterval:1.0];
         }
         //测试结果
         BOOL isPassed = self.isRunning && (arc4random_uniform(2) == 1);

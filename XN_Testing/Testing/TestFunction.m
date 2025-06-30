@@ -61,9 +61,8 @@
     } else if([inputString isEqualToString:@"mix_fw_version"]) {
         response = @"122";
     } else {
-//        [LogShare writeLog:[NSString stringWithFormat:@"%s : %@", __func__, @"传入的参数无效!"] type:LogTypeTest];
+        return ERROR;
     }
-//    [LogShare writeLog:[NSString stringWithFormat:@"%s : %@", __func__, response] type:LogTypeTest];
     return response;
 }
 
@@ -82,9 +81,8 @@
     } else if ([inputString isEqualToString:@"SOCKET_EEPROM"]) {
         dict = @{@"sn" : @"SOCKET0506120", @"apn" : @"SOCKET_apn", @"counter" : @"300k"};
     } else {
-//        [LogShare writeLog:[NSString stringWithFormat:@"%s : %@", __func__, @"传入的参数无效!"] type:LogTypeTest];
+        return @{@"mes" : ERROR};
     }
-//    [LogShare writeLog:[NSString stringWithFormat:@"%s : %@", __func__, dict] type:LogTypeTest];
     return dict;
 }
 
@@ -97,7 +95,6 @@
     if (registerValue && length) {
         response = @"SOCKET0506120";
     }
-//    [LogShare writeLog:[NSString stringWithFormat:@"%s : %@", __func__, response] type:LogTypeTest];
     return response;
 }
 

@@ -14,7 +14,7 @@
     [super awakeFromNib];
     NSRect frame = self.frame;
     frame.size.width = 800;
-    frame.size.height = 500;
+    frame.size.height = 600;
     [self setFrame:frame display:YES];
     
     self.backgroundColor = [NSColor windowBackgroundColor];

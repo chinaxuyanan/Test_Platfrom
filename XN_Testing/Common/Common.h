@@ -14,6 +14,10 @@
 #define CSVDidUpdateNotification @"TestProgressUpdateNotification"
 #define ResultUpdateNotification @"ResultDidUpdateNotification"
 
+#define PASS @"--PASS--"
+#define FAIL @"--FAIL--"
+#define ERROR @"--ERROR--"
+
 typedef NS_ENUM(NSUInteger, TableViewColumnType) {
     TableViewColumnIndex,
     TableViewColumnSlot,
